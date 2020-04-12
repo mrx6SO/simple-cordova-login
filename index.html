@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function() {
-            var url = "http://localhost:8888/login/auth.php";
+            var url = "auth.php";
             
             $("#loginButton").click(function(){
                 var email= $.trim($("#email").val());
@@ -33,7 +33,7 @@
                         if(data == "success") {
                             $("#status").text("Login Success..!");
                             localStorage.loginstatus = "true";
-                            window.location.href = "index.html";
+                            window.location.href = "welcome.html";
                         }
                         else if(data == "error")
                         {
